@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "bootstrap/dist/css/bootstrap.css";
+import TodoInput from "./Components/TodoInput";
 import TodoList from "./Components/TodoList";
-import TodoItem from "./Components/TodoItem";
 
 class App extends Component {
   state = {
@@ -37,7 +37,7 @@ class App extends Component {
         <div className="row">
           <div className="col-10 mx-auto col-md-8 mt-5">
             <h3 className="text-center text-capitalize">todo list</h3>
-            <TodoItem
+            <TodoInput
               item={this.state.item}
               handleChange={this.handleChange}
               handleSubmit={this.handleSubmit}
