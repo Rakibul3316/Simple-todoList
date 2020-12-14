@@ -38,7 +38,7 @@ class App extends Component {
   handleEdit = (id) => {
     console.log(`Handle Edit ${id}`);
   };
-  handleDelet = (id) => {
+  handleDelete = (id) => {
     console.log(`Handle Delet ${id}`);
   };
 
@@ -58,7 +58,7 @@ class App extends Component {
               items={this.state.items}
               clearList={this.clearList}
               handleEdit={this.handleEdit}
-              handleDelet={this.handleDelet}
+              handleDelete={this.handleDelete}
             />
           </div>
         </div>
