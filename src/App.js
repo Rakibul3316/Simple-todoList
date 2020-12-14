@@ -21,13 +21,16 @@ class App extends Component {
       id: this.state.id,
       title: this.state.item,
     };
-    const updatedItem = [...this.state, newItem];
-    this.setState({
-      items: updatedItem,
-      item: "",
-      id: uuidv4(),
-      editItem: false,
-    });
+    const updatedItem = [...this.state.items, newItem];
+    this.setState(
+      {
+        items: updatedItem,
+        item: "",
+        id: uuidv4(),
+        editItem: false,
+      },
+      () => console.log(this.state)
+    );
   };
   clearList = () => {
     console.log("celar list");
