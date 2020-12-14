@@ -23,7 +23,7 @@ class TodoList extends Component {
           className="btn btn-danger btn-block mt-5"
           onClick={clearList}
         >
-          clear list
+          Clear List
         </button>
       </ul>
     );
