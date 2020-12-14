@@ -30,13 +30,18 @@ class App extends Component {
     });
   };
   clearList = () => {
-    console.log("celar list");
+    this.setState({
+      items: [],
+    });
   };
   handleEdit = (id) => {
     console.log(`Handle Edit ${id}`);
   };
   handleDelete = (id) => {
-    console.log(`Handle Delet ${id}`);
+    const filterItems = this.state.items.filter((item) => item.id !== id);
+    this.setState({
+      items: filterItems,
+    });
   };
 
   render() {
